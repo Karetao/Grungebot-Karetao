@@ -1,4 +1,4 @@
-#ifndef MOVE_FUNCTIONS.H
+#ifndef MOVE_FUNCTIONS_H
     #include <Arduino.h>
 
     void forward(int power);
@@ -10,5 +10,5 @@
     void backwardLeft(int power);
     void backwardRight(int power);
     void fullstop();
-    
+
 #endif
