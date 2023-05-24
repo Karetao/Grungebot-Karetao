@@ -1,5 +1,5 @@
-#ifndef MOVE_FUNCTIONS_H
-#include <Arduino.h>
+#ifndef SETTINGS_H
+    #include <Arduino.h>
 
     extern int motorA;  //Left Motor Power
     extern int inLeft1;      //Left Motor direction
