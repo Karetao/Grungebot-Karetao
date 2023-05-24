@@ -1,5 +1,6 @@
 #include <Arduino.h>   
-
+#include "setup_stuff.h"
+#include "move_functions.h"
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //FUNCTIONS  
 // This function makes the motors go forward. 
@@ -138,17 +139,3 @@ void fullstop()
   analogWrite(motorB, 200);
 }
 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//  HERE IS WHERE IT ALL HAPPENS
-//  You can use the following commands (functions):
-//    forward()  backward()  pivotLeft()  pivotRight()  forwardLeft()  forwardRight() and fullstop()
-//
-//  In the brackets you say how much power the motors should use ( 0 being no power, up to 256 for full power). 
-//
-//  Except for delay, that thing has the duration of the delay not power (it is in ms, 1000 is a second)
-//
-//  For example:
-//  forward(200);    // Go forward with power set to 200
-//  delay(2000);     // Keep doing whatever its doing for 2 seconds (2000ms)
-//  fullstop();      // Ok this is obvious. When you turn things off you don't need to say a power 
