@@ -1,6 +1,6 @@
 #include <Arduino.h>   
-#include "setup_stuff.h"
 #include "move_functions.h"
+#include "settings.h"
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //FUNCTIONS  
 // This function makes the motors go forward. 

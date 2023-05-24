@@ -2,20 +2,9 @@
  // GRUNGE BOT TUTORIAL CODE //
 //?????????????????????????//
 
-#include <Arduino.h>     
-#include "setup_stuff.h"    
+#include <Arduino.h>       
 #include "move_functions.h" 
-
-void setup()
-{
-  // set all the pins we are using on the computer to be outputs (sending a signal to the motor controller)
-  pinMode(motorA, OUTPUT);
-  pinMode(motorB, OUTPUT);
-  pinMode(inLeft1, OUTPUT);
-  pinMode(inLeft2, OUTPUT);
-  pinMode(inRight3, OUTPUT);
-  pinMode(inRight4, OUTPUT);
-}
+#include "settings.h"
 
 
 
