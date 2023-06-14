@@ -4,6 +4,7 @@
 
 #include <Arduino.h>       
 #include "move_functions.h" 
+#include "sensor_functions.h" 
 #include "settings.h"
 
 
@@ -20,6 +21,23 @@ void loop()
   delay(3000);
   fullstop();
   delay(3000);
+
+  // checkDistance();
+  // if (cm>50) 
+  //   {
+  //   forward(120);
+  //   delay(100);
+  //   }
+  // else
+  //   {
+  //   fullstop();
+  //   //pivotLeft(120);
+  //   delay(2000);
+  //   }
+
+
+
+
 }
 
 
