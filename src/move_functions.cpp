@@ -8,7 +8,7 @@
 // In that first line the number it is sent in the brackets is give to the variable "power"
 
 void forward(int power)
-{
+{ 
   // switch on motor A to Forward 
   digitalWrite(inLeft1, HIGH);
   digitalWrite(inLeft2, LOW);
