@@ -10,7 +10,7 @@
 void forward(int power)
 { 
   // switch on motor A to Forward 
-  digitalWrite(inLeft1, HIGH);
+  digitalWrite(inLeft1, HIGH); 
   digitalWrite(inLeft2, LOW);
   
   // switch on motor B to Forward
