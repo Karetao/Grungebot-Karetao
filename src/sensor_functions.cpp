@@ -7,7 +7,7 @@
 
 
 
-void checkDistance()
+int checkDistance()
 {
   digitalWrite(triggerPin, LOW);
   delayMicroseconds(2);              //just making sure its low before we start
@@ -28,5 +28,6 @@ void checkDistance()
   Serial.print("cm");
   Serial.println();
   
+  return cm;
 //  delay(100);  //You cant send info back to the computer too quickly, add this delay if there is no other delays in your code, it will just slow thing down.
 }

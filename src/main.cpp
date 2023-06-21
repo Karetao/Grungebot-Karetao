@@ -26,10 +26,10 @@ void loop()
 
 
 //Test the ultrasconic
-  checkDistance();
+ int distance = checkDistance();
 
   // checkDistance();
-  // if (cm>50) 
+  // if (distance>50) 
   //   {
   //   forward(120);
   //   delay(100);
