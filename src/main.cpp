@@ -26,11 +26,7 @@ void loop()
 
 
 //Test the ultrasconic
-  Serial.print(cm);
-  Serial.print("cm");
-  Serial.println();
-  delay(100);
-
+  checkDistance();
 
   // checkDistance();
   // if (cm>50) 
