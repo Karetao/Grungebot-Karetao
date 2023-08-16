@@ -37,11 +37,51 @@ void loop()
   // else
   //   {
   //   fullstop();
-  //   //pivotLeft(120);
-  //   delay(2000);
+  //   pivotLeft(120);
+  //   delay(100);
   //   }
 
 
+
+
+  // checkDistance();
+  // if (distance>100) 
+  //   {
+  //   pivotLeft(100);
+  //   delay(50);
+  //   }
+  // else
+  //   {
+  //   //fullstop();
+  //   forward(120);
+  //   delay(100);
+  //   }
+
+
+
+  fullstop();
+  delay(500);
+  checkDistance();
+  if (distance>100) 
+    {
+    pivotLeft(100);
+    delay(50);
+    }
+  else if (distance > 50 )
+    {
+    forward(100);
+    delay(50);
+    }
+  else if (distance > 10 )
+    {
+    forward(150);
+    delay(300);
+    }
+  else
+    {
+    forward(240);
+    delay(600);
+    }
 
 
 }
