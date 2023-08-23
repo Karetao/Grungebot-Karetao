@@ -10,25 +10,26 @@
 
 
 
+int distance = 3000;
 
 void loop() 
 { 
   //Test the driving
-  // forward(200);    //200 is the power level
-  // delay(3000);    //3000 is the number of milliseconds to wait until doing the next instruction 
-  // fullstop();
-  // delay(100);
-  // backward(200);
-  // delay(3000);
-  // fullstop();
-  // delay(3000);
+  forward(200);    //200 is the power level
+  delay(3000);    //3000 is the number of milliseconds to wait until doing the next instruction 
+  fullstop();
+  delay(100);
+  backward(200);
+  delay(3000);
+  fullstop();
+  delay(3000);
 
 
 
 //Test the ultrasconic
- int distance = checkDistance();
+//  int distance = checkDistance();
 
-  // checkDistance();
+  // distance = checkDistance();
   // if (distance>50) 
   //   {
   //   forward(120);
@@ -43,8 +44,9 @@ void loop()
 
 
 
-
-  // checkDistance();
+  // fullstop();
+  // delay(500);
+  // distance = checkDistance();
   // if (distance>100) 
   //   {
   //   pivotLeft(100);
@@ -53,7 +55,7 @@ void loop()
   // else
   //   {
   //   //fullstop();
-  //   forward(120);
+  //   forward(100);
   //   delay(100);
   //   }
 
@@ -61,7 +63,7 @@ void loop()
 
   fullstop();
   delay(500);
-  checkDistance();
+  distance = checkDistance();
   if (distance>100) 
     {
     pivotLeft(100);
