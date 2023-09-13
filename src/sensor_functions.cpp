@@ -31,3 +31,4 @@ int checkDistance()
   return cm;
 //  delay(100);  //You cant send info back to the computer too quickly, add this delay if there is no other delays in your code, it will just slow thing down.
 }
+

@@ -18,6 +18,9 @@ int echoPin = 13;       //The arduino will Listen to the echo on pin 13
 long duration;    // create variable that will hold the time it takes between the ping and the echo being heard 
 long cm = 3000;   // create a variable for the distance result in cm and set it to 3000cm 
 
+//LineSensor
+int lineSensorPin =  9;
+
 
 void setup()
 {
@@ -34,4 +37,7 @@ void setup()
   Serial.begin(9600); // initialize serial communication to the "monitor" so we can test the Ultrasonic sensor
   pinMode(triggerPin, OUTPUT);  //set the ultrasonic shouting pin
   pinMode(echoPin, INPUT);  // set the ultrasonic listening pin
+
+  //LineSensor
+  pinMode(lineSensorPin,INPUT);
 }

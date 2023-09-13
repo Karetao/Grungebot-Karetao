@@ -14,6 +14,7 @@
     extern long duration;    // create variable that will hold the time it takes between the ping and the echo being heard 
     extern long cm;   // create a variable for the distance result in cm and set it to 3000cm 
 
+    extern int lineSensorPin;
 
     void setup();
 
