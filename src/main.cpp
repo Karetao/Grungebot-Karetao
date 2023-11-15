@@ -136,77 +136,77 @@ void loop()
 
  
 //Check line sensor  (1 or HIGH is Bright and 0 or LOW is Dark)
-  // delay(50);
-  // fullstop();  //Use the stop and delay to slow things down if needed
-  // delay(500);
+  delay(50);
+  fullstop();  //Use the stop and delay to slow things down if needed
+  delay(500);
 
-  // //Check distance and if it is on the line
-  // distance = checkDistance();
-  // onLine = digitalRead(lineSensorPin);
+  //Check distance and if it is on the line
+  distance = checkDistance();
+  onLine = digitalRead(lineSensorPin);
 
-  // Serial.print("Linesensor value = ");
-  // Serial.print(distance);
-  // Serial.print("  Distance value = ");
-  // Serial.print(onLine);
-  // Serial.println();
+            Serial.print("Linesensor value = ");
+            Serial.print(onLine);
+            Serial.print("  Distance value = ");
+            Serial.print(distance);
+            Serial.println();
   
   
-  // if (distance>100) 
-  //   {
-  //     if (onLine == HIGH)
-  //     {
-  //       //WHAT TO DO?? GrungeBot has just turned left into the edge. DO Something!
-  //       fullstop();  //STOP!!! You are on the line
-  //       delay(500);
-  //       pivotRight(200);
-  //       delay(700); //keep piviting for 100ms  
-  //       forward(200);
-  //       delay(1000); //keep going forward for 1 second !!!!!! You could improve this using a While loop to check the line while you escape so you don't just dive over it
-  //       // Hopefully it is off the line now and now more in the middle of the arena
-  //     }
-  //     else
-  //     {
-  //       pivotLeft(100);
-  //     }
-  //   }
+  if (distance>100) 
+    {
+      if (onLine == HIGH)
+      {
+         //WHAT TO DO?? GrungeBot is on the line. DO Something!  
+        fullstop();  //STOP!!! You are on the line
+        delay(500);
+        pivotRight(200);
+        delay(700); //keep piviting for 100ms  
+        forward(200);
+        delay(1000); //keep going forward for 1 second !!!!!! You could improve this using a While loop to check the line while you escape so you don't just dive over it
+        // Hopefully it is off the line now and now more in the middle of the arena
+      }
+      else
+      {
+        pivotLeft(100);
+      }
+    }
 
-  // else if (distance > 50 )  //so it is less than 100 and more than 50
-  //   {
-  //     if (onLine == HIGH)
-  //     {
-  //       //WHAT TO DO?? GrungeBot has just is on the line. DO Something!  
-  //       fullstop();  //STOP!!! You are on the line
-  //       delay(700);
-  //       pivotRight(200);
-  //       delay(500); //keep piviting for 100ms  (hopefully it is off the line now)
-  //       forward(200);
-  //       delay(1000); //keep going forward for 1 second 
-  //       // Hopefully it is off the line now and now more in the middle of the arena
-  //     }
-  //     else
-  //     {
-  //       forward(150);
-  //     }
-  //   }
+  else if (distance > 50 )  //so it is less than 100 and more than 50
+    {
+      if (onLine == HIGH)
+      {
+        //WHAT TO DO?? GrungeBot is on the line. DO Something!  
+        fullstop();  //STOP!!! You are on the line
+        delay(700);
+        pivotRight(200);
+        delay(500); //keep piviting for 100ms  (hopefully it is off the line now)
+        forward(200);
+        delay(1000); //keep going forward for 1 second 
+        // Hopefully it is off the line now and now more in the middle of the arena
+      }
+      else
+      {
+        forward(150);
+      }
+    }
 
-  // else  //Something is very close (close than 50cm)
-  //   {
-  //     if (onLine == HIGH)
-  //     {
-  //       //WHAT TO DO?? GrungeBot has just is on the line. DO Something!  
-  //       fullstop();  //STOP!!! You are on the line
-  //       delay(700);
-  //       pivotRight(200);
-  //       delay(500); //keep piviting for 100ms  (hopefully it is off the line now)
-  //       forward(200);
-  //       delay(1000); //keep going forward for 1 second 
-  //       // Hopefully it is off the line now and now more in the middle of the arena
-  //     }
-  //     else
-  //     {
-  //       forward(250);
-  //     }
-  //   }
+  else  //Something is very close (close than 50cm)
+    {
+      if (onLine == HIGH)
+      {
+         //WHAT TO DO?? GrungeBot is on the line. DO Something!  
+        fullstop();  //STOP!!! You are on the line
+        delay(700);
+        pivotRight(200);
+        delay(500); //keep piviting for 100ms  (hopefully it is off the line now)
+        forward(200);
+        delay(1000); //keep going forward for 1 second 
+        // Hopefully it is off the line now and now more in the middle of the arena
+      }
+      else
+      {
+        forward(250);
+      }
+    }
 
 
 
@@ -226,7 +226,6 @@ void loop()
   while (onLine == LOW)
   {
     distance = checkDistance();
-    onLine = digitalRead(lineSensorPin);
       if (distance>100)
       {
         pivotLeft(100);
@@ -243,11 +242,12 @@ void loop()
       {
         forward(240);
       }    
+      onLine = digitalRead(lineSensorPin);
   }
   
   if (onLine == HIGH)
   {
-    //WHAT TO DO?? GrungeBot has just is on the line. DO Something!  
+    //WHAT TO DO?? GrungeBot is on the line. DO Something!  
     fullstop();  //STOP!!! I guess this is the first thing
     delay(700);
     pivotRight(200);
